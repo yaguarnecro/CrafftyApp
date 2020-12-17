@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+	<Target Name="Parcel" BeforeTargets="Build">
+		<Exec Command="npm run build" />
+	</Target>
+
   <ItemGroup>
     <Compile Remove="NewFolder\**" />
     <Content Remove="NewFolder\**" />
